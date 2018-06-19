@@ -1,0 +1,150 @@
+\documentclass[twocolumn]{article}
+%\documentclass{article}
+% Margenes----------------------------------------------------------
+\textheight = 24cm
+\textwidth = 18.5cm % Ancho
+\topmargin = -2.5cm
+\oddsidemargin = -1cm
+\parindent = 0mm % Sin sangr????a
+%Paquetes adicionales-----------------------------------------------
+%Otra opcin para m????rgenes,etc., es el paquete geometry.
+%\usepackage[total={18cm,21cm},top=2cm, left=2cm]{geometry}
+\usepackage{latexsym,amsmath,amssymb,amsfonts}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[spanish, activeacute]{babel} %Definir idioma español
+\usepackage[utf8]{inputenc} %Codificacion utf-8
+%\usepackage[lined,boxed]{algorithm2e}
+%\usepackage[linesnumbered]{algorithm2e}
+
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{algorithmic}
+%\usepackage[spanish]{babel} % Idioma espa????ol
+\renewcommand{\baselinestretch}{1.1} % espaciado 1.1
+\pagestyle{myheadings}
+
+% \markright{...... texto .......}
+%-------------------------------------------------------------------
+\begin{document} 
+
+%titulo
+\title{
+Clasificaci\'on de los equipos nacionales de f\'utbol   usando el algoritmo PageRank
+}
+\date{}
+\author{Alex Avila, Bazalar Rommel,Konrad Trejo\\
+\small{\texttt{\@aavilas@uni.pe, rbazalarc@uni.pe,btrejoc@uni.pe}}}
+\maketitle
+
+
+
+%Seccion Introduccion
+\section{Introducción}
+
+	Ante la necesidad de lograr un ranking de los equipos nacionales de fútbol, comprendido por los países que practican este deporte , el ranking FIFA no considera títulos ganados, pero si considera los partidos amistosos, lo cúal puede ser un problema pues para calcular ranking de países debe considerarse los títulos ganados y en cuánto a los amistosos algunos técnicos prueban los equipos, por lo tanto no debería entrar al ranking los partidos amistosos.
+
+Con el fin de combatir este problema surge la idea de la creación de un nuevo
+ranking  Basándonos en el método de PageRank, generado por Larry
+Page y Sergey Brin, logramos generar un nuevo ranking que se destaca por la cantidad de títulos ganados, y no consideraremos los partidos amistosos.
+
+Basándonos en un historial de los partidos mundialistas nos proponemos evaluar cómo
+se comporta el nuevo método creado en comparación de otros rankings existentes y así
+analizar si realmente logramos una mejora en el reflejo de la realidad.
+Una vez obtenido el ranking, nos proponemos a, dado un partido, evaluar el
+ranking de los países que lo disputan  así poder indicar
+con que probabilidad saldrá victorioso el equipo con mejor posicionamiento.
+
+Para lograr todo esto tendrémos que usar nuestros conocimientos en el curso de Probabilidades y también aprovechar nuestro conocimiento en el lenguaje R.
+
+% La bibliografia se encuentra de el archivo 
+ %bibliografia.bib adjunto en los\archivos
+
+%Seccion estado del arte
+\section{Estado del arte}
+-Breve mención del aporte que otros artculos cientícos han realizado para este problema.
+
+-Mención de al menos 2 artculos cientícos que mencionen el problema y las variantes
+realizadas.
+
+%seccion Diseño del experimento
+\section{Diseño del experimento}
+Descripción de los objetos, funciones y técnicas a utlizar.
+
+\begin{itemize}
+	\item
+	Ejemplo item 1
+	\item
+	Ejemplo item 2
+	\end{itemize}	
+    %figura1.1
+% Ejemplo de poner imagen   
+%    \begin{figure}
+%   \centering
+%	\includegraphics[width=0.5\textwidth]{rotacion}
+%	\caption{Rotaci\'on}\label{FI1_1}
+%\end{figure}
+
+%Subseccion Experimentos y resultados
+\section{Experimentos y resultados}
+
+\begin{itemize}
+	\item
+	Línea base: Reproducción de resultados reportados en un artculo cientíco
+anterior.
+	\item
+	Evaluación del rendimiento de los modelos ensayados.
+    \item
+    Comparación de línea base y resultados propios.
+	\end{itemize}	
+
+\subsection{Ejemplo de subsecuencia}
+
+Ejemplo de secuencias $X_{1}$,$X_{2}$, . . ., $X_{m}$
+
+Ejemplo de sumatoria
+\[O(
+\sum_{k=1}^{n}p_{k}log(1/p_{k}))
+\]
+ Ejemplo de o grande
+\begin{center}
+ O(log($min_{i<j}$(|$x_{i}$| + $t_{i}$ + 2)))    
+\end{center}
+
+\section{Discusión}
+
+-Interpretación de los resultados obtenidos.
+
+-¿Cómo podría ser mejorado sus resultados?
+
+%\begin{figure}
+
+%	\includegraphics[width=0.5\textwidth]{zigzag.png}
+%	\caption{Movimientos zig-zig y zig-zag}\label{FI1_2}
+%\end{figure}
+
+
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=0.5\textwidth]{toques.png}
+%	\caption{Gr\'afica de elementos del \'arbol versus recorridos por el algoritmo al buscarlos}\label{FI1_3}
+%\end{figure}
+
+
+\paragraph{Ejemplo de subtítulo}
+Un conjunto de puntos que contenga a $ (x_i,i) $ es arb\'oricamente
+satisfecho si y s\'olo si este corresponde a un \'arbol de b\'usqueda
+binaria v\'alido para el input $ (x_1,...,x_m) $.
+
+\section{Conclusiones y trabajos futuros}
+Conclusiones del proyecto
+\section{Bibliografía}
+
+%Biliografia************************
+%\bibliographystyle{apalike}
+\nocite{*}
+\bibliographystyle{apalike}
+\bibliography{<1>,}
+
+%Fin del documento
+\end{document}
