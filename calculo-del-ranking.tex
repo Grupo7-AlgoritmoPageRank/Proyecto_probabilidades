@@ -30,7 +30,7 @@
 
 %titulo
 \title{
-Clasificaci\'on de los equipos nacionales de f\'utbol   usando el algoritmo PageRank
+Cálculo del ranking de los países sudamericanos que participaron en las eliminatorias para el mundial Ru	sia 2018 
 }
 \date{}
 \author{Alex Avila, Bazalar Rommel,Konrad Trejo\\
@@ -42,31 +42,31 @@ Clasificaci\'on de los equipos nacionales de f\'utbol   usando el algoritmo Page
 %Seccion Introduccion
 \section{Introducción}
 
-	Ante la necesidad de lograr un ranking de los equipos nacionales de fútbol, comprendido por los países que practican este deporte , el ranking FIFA no considera títulos ganados, pero si considera los partidos amistosos, lo cúal puede ser un problema pues para calcular ranking de países debe considerarse los títulos ganados y en cuánto a los amistosos algunos técnicos prueban los equipos, por lo tanto no debería entrar al ranking los partidos amistosos.
+	El objetivo de este proyecto es lograr un ranking parecido al de FIFA, pero solo con las selecciones sudamericanas tomando en cuenta los partidos de la eliminatoria para el mundial Rusia 2018.
 
-Con el fin de combatir este problema surge la idea de la creación de un nuevo
-ranking  Basándonos en el método de PageRank, generado por Larry
-Page y Sergey Brin, logramos generar un nuevo ranking que se destaca por la cantidad de títulos ganados, y no consideraremos los partidos amistosos.
+	Con el fin de cumplir el objetivo mencionado, surge la idea de la creación de un nuevo ranking basándonos en el método de PageRank (generado por Larry Page y Sergey Brin), generando así un nuevo ranking en que se destacan los países sudamericanos.
 
-Basándonos en un historial de los partidos mundialistas nos proponemos evaluar cómo
-se comporta el nuevo método creado en comparación de otros rankings existentes y así
-analizar si realmente logramos una mejora en el reflejo de la realidad.
-Una vez obtenido el ranking, nos proponemos a, dado un partido, evaluar el
-ranking de los países que lo disputan  así poder indicar
-con que probabilidad saldrá victorioso el equipo con mejor posicionamiento.
+	Basándonos en un historial de los partidos, nos proponemos evaluar cómo se comporta el nuevo método creado en comparación de otros rankings existentes y así observar cual de los métodos disponibles refleja mejor la realidad.
 
-Para lograr todo esto tendrémos que usar nuestros conocimientos en el curso de Probabilidades y también aprovechar nuestro conocimiento en el lenguaje R.
+	Una vez obtenido el ranking, nos proponemos a, dado un partido, evaluar el ranking de los países que lo disputan  así poder indicar con que probabilidad saldrá victorioso el equipo con mejor posicionamiento. Para lograr todo esto tendrémos que usar nuestros conocimientos en el curso de Probabilidades y también aprovechar nuestro conocimiento en el lenguaje R.
 
 % La bibliografia se encuentra de el archivo 
  %bibliografia.bib adjunto en los\archivos
 
+\section{Resumen}
+\begin{itemize}
+\item 
+\end{itemize}
+
 %Seccion estado del arte
 \section{Estado del arte}
--Breve mención del aporte que otros artculos cientícos han realizado para este problema.
-
--Mención de al menos 2 artculos cientícos que mencionen el problema y las variantes
-realizadas.
-
+\begin{itemize}
+	\item
+	"TenisRank: Un Nuevo Ranking De Jugadores De Tenis
+basado en PageRank", Analizan un nuevo ranking de jugadores de tenis debido a las críticas existentes del ranking actual, para esto utilizan el famoso algoritmo de google "PageRank".
+	\item
+	"PageRank Approach to Ranking National Football Teams". Analizan los datos disponibles sobre los campeonatos mundiales de fútbol desde 1930 hasta hoy. Cuyo objetivo es clasificar los equipos nacionales en función de todos los partidos durante los campeonatos. Para este propósito, aplican el PageRank creado a partir de los juegos jugados durante los torneos. 
+	\end{itemize}	
 %seccion Diseño del experimento
 \section{Diseño del experimento}
 Descripción de los objetos, funciones y técnicas a utlizar.
@@ -90,7 +90,7 @@ Descripción de los objetos, funciones y técnicas a utlizar.
 
 \begin{itemize}
 	\item
-	Línea base: Reproducción de resultados reportados en un artculo cientíco
+	Línea base: Reproducción de resultados reportados en un artículo científico
 anterior.
 	\item
 	Evaluación del rendimiento de los modelos ensayados.
@@ -106,7 +106,7 @@ Ejemplo de sumatoria
 \[O(
 \sum_{k=1}^{n}p_{k}log(1/p_{k}))
 \]
- Ejemplo de o grande
+ Ejemplo de O grande
 \begin{center}
  O(log($min_{i<j}$(|$x_{i}$| + $t_{i}$ + 2)))    
 \end{center}
