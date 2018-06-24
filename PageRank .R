@@ -1,8 +1,9 @@
 
 # PageRank Algorithm  # 
 
-#Usaremos un caso particular
-#Definimos nuestra matriz de adyacencia con los equipos del mundial Brasil 2014
+#Usaremos un caso particularp
+#Definimos nuestra matriz de adyacencia con los equipos sudamericanos
+#que participaron para las eliminatorias del Mundial Rusia 2018
 
 #Orden para cada País que participo en las eliminatorias
 
