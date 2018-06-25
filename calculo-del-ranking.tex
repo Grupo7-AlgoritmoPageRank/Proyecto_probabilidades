@@ -67,7 +67,7 @@ basado en PageRank", Analizan un nuevo ranking de jugadores de tenis debido a la
 	\item
 	Vectores : Son una de las unidades básicas de trabajo en R y muchos de los métodos de trabajo con este tipo de objetos se aplica para otras clases deobjetos. Por ejemplo, casi todos los objetos pueden ser indexados usando [ ].
 	Un vector es una colección de uno o más objetos del mismo tipo (
-caracteres, números,etc); esta es una restricción importante a la hora de crear un vector, como veremos más adelante.
+caracteres, números,etc); esta es una restricción importante a la hora de crear un vector.
 	\item
 	Matrices : Una matrix es un array con dos dimensiones. Tienen una
 funcionalidad muy parecida a la del vector.
@@ -76,7 +76,7 @@ funcionalidad muy parecida a la del vector.
     \item 
     Grafos con Igraph : El paquete para R Igraph, necesita que se le presenten los datos de la matriz de adyacencia por parejas. Es decir, una matriz de doble entrada convencional (también llamada sociomatriz, tabla de confundido o tabla de concordancia) ha de pasarse al formato de Igraph.
     \item
-    Eigen : Calcula valores propios y vectores propios de matrices numéricas (dobles, enteras, lógicas) o complejas.\\ \\ \\ \\ \\ \\
+    Eigen : Calcula valores propios y vectores propios de matrices numéricas (dobles, enteras, lógicas) o complejas.\\ \\ \\ \\ \\ \\ \\ \\
 	\end{itemize}	
 %Subseccion Experimentos y resultados
 \section{Experimentos y resultados}
@@ -120,7 +120,7 @@ Ranking & País  & PageRank\\
 \end{tabular}
     \item
     Comparación de línea base y resultados propios :\\ 
- Podemos ver que el primer puesto lo ocupa Brasil en ambos ranking's. El segundo puesto y tercer puesto sí han cambiado con respecto del Ranking FIFA, en el que Uruguay y Argentina los ocupan respectivamente; en cambio, con el algoritmo PageRank, Argentina y Uruguay ocupan esos puestos respectivamente. En el cuarto puesto sí hay un gran cambio pues Bolivia ascendió del último puesto es Ranking FIFA al cuarto en el PageRank, otro cambio más sería que Paraguay está por encima de Chile en el nuevo Ranking desarrollado con PageRank .
+ Podemos ver que el primer puesto lo ocupa Brasil en ambos ranking's. El segundo puesto y tercer puesto sí han cambiado con respecto del Ranking FIFA, en el que Uruguay y Argentina los ocupan respectivamente; en cambio, con el algoritmo PageRank, Argentina y Uruguay ocupan esos puestos respectivamente. En el cuarto puesto sí hay un gran cambio pues Bolivia ascendió del último puesto en el Ranking FIFA al cuarto puesto en el de PageRank. Otro cambio más sería que Paraguay está por encima de Chile en el nuevo Ranking desarrollado con PageRank .
 	\end{itemize}	
 
 %\subsection{Ejemplo de subsecuencia}
@@ -137,15 +137,13 @@ Ranking & País  & PageRank\\
 %\end{center}
 
 \section{Discusión}
- Interpretación de los resultados obtenidos.
+Interpretación de los resultados obtenidos.
 \begin{itemize}
-\item Puede ser que el algoritmo basado en PageRank sea congruente con el de la FIFA cuando se trata de no dar falsos positivos de equipos de baja categoría; sin embargo, como es el caso de Bolivia, un falso positivo de un equipo de alta categoría es posible.
-
+\item El cambio más notorio se nota en Bolivia, esto se debe porqué Bolivia le ganó o empató a países con pagerank altos, entonces su pagerank subirá considerablemente. Acá no solo se considerá partidos ganados sino también a quién gana. 
 \end{itemize}
-
 ¿Cómo podría ser mejorado sus resultados?
 \begin{itemize}
-\item Una mayor cantidad de datos mejoraría la precisión de nuestros resultados, obviamente; aún así, es importante señalar que actualmente no se puede realizar un análisis completo de la eficacia del algoritmo, dado que la muestra de todos los equipos sudamericanos es muy pequeña, por lo tanto se necesitaría su desempeño a través de los años en más-de-una copas mundiales para compensar.
+\item Una mayor cantidad de datos mejoraría la precisión de nuestros resultados, obviamente; aún así, es importante señalar que actualmente no se puede realizar un análisis completo de la eficacia del algoritmo, dado que la muestra de todos los equipos sudamericanos es muy pequeña, por lo tanto se necesitaría su desempeño a través de los años en eliminatorias y copas mundiales para compensar.
 
 \end{itemize}
  
@@ -165,6 +163,11 @@ Ranking & País  & PageRank\\
 
 \section{Conclusiones y trabajos futuros}
 
+Al inicio del paper se identificó una problemática con la metodología con la cual se obtiene el ranking oficial de la Fifa. Para solucionar esta problemática, hemos desarrollado un algoritmo de clasificación basado en PageRank, aunque no se aplicó a todos los equipos nacionales clasificados en el mundial, sino que se redujo la muestra a tan solo los paises sudamericanos.
+Una vez obtuvimos nuestra propia clasificación, se pasó a compararla con el ranking de la FIFA y se determino una gran similitud, excepto en un caso especial de gran desviación (Bolivia).
+Se concluye que el algoritmo presentado tiene gran potencial, y es capaz de reproducir los resultados de otros métodos de clasificación que poseen más data con la que determinar sus resultados. \\
+En el futuro se puede extender este proyecto para calcular un ranking con los paises en su totalidad y considerando como antecedentes unos 15-20 años de historia.
+
 
 \section{Bibliografía}
 \begin{itemize}
@@ -176,6 +179,13 @@ http://images.math.cnrs.fr/Comment-Google-classe-les-pages.html, 2009.
 A.N. Langville and C. D. Meyer, A Survey of Eigenvector Methods
 for Web Information Retrieval, SIAM Review, Volume 47, Issue 1,
 (2005), pp. 135–161.
+\item
+http://www.economicas.uba.ar/wp-content/uploads/2016/04/2-¿Cómo-funciona-google-el-algoritmo-pagerank-diagramas-de-grafos-y-cadenas-de-markov.-Juan-Manuel-Barriola-y-Milena-Dotta-2.pdf
+\item
+https://www.youtube.com/watch?v=u8HtO7Gd5q0
+\item
+C. Rousseau and Y. Saint-Aubin, Mathematics and
+technology, SUMAT Series, Springer-Verlag, 2008.
 \end{itemize}
 %Fin del documento
 \end{document}
