@@ -30,14 +30,12 @@
 
 %titulo
 \title{
-Cálculo del ranking de los países sudamericanos que participaron en las eliminatorias para el mundial Rusia 2018 
+Cálculo del ranking de los países sudamericanos que participaron en las eliminatorias para el mundial Rusia 2018 usando el algoritmo PageRank
 }
 \date{}
 \author{Alex Avila, Bazalar Rommel,Konrad Trejo\\
 \small{\texttt{\@aavilas@uni.pe, rbazalarc@uni.pe,konrad.trejo.c@uni.pe}}}
 \maketitle
-
-
 
 %Seccion Introduccion
 \section{Introducción}
@@ -53,11 +51,6 @@ Cálculo del ranking de los países sudamericanos que participaron en las elimin
 % La bibliografia se encuentra de el archivo 
  %bibliografia.bib adjunto en los\archivos
 
-\section{Resumen}
-\begin{itemize}
-\item 
-\end{itemize}
-
 %Seccion estado del arte
 \section{Estado del arte}
 \begin{itemize}
@@ -69,47 +62,80 @@ basado en PageRank", Analizan un nuevo ranking de jugadores de tenis debido a la
 	\end{itemize}	
 %seccion Diseño del experimento
 \section{Diseño del experimento}
-Descripción de los objetos, funciones y técnicas a utlizar.
-
+\subsection{Objetos ,funciones y técnicas utilizadas}
 \begin{itemize}
 	\item
-	Ejemplo item 1
+	Vectores : Son una de las unidades básicas de trabajo en R y muchos de los
+métodos de trbajo con este tipo de objetos se aplica para otras clases de
+objetos. Por ejemplo, casi todos los objetos pueden ser indexados usando [ ].
+	Un vector es una colección de uno o más objetos del mismo tipo (
+caracteres, números,etc); esta es una restricción importante a la hora de crear
+un vector, como veremos más adelante.
 	\item
-	Ejemplo item 2
+	Matrices : Una matrix es un array con dos dimensiones. Tienen una
+funcionalidad muy parecida, pero matrix es más cómoda.
+	\item
+    Plot  : La función plot es una función genérica para la representación gráfica de objetos en R. Los gráficos más sencillos que permite generar esta función son nubes de puntos (x,y).
+    \item 
+    Grafos con Igraph : El paquete para R Igraph, necesita que se le presenten los datos de la matriz de adyacencia por parejas. Es decir, una matriz de doble entrada convencional (o sociomatriz o tabla de confundido o tabla de concordancia o como la quieran llamar) ha de pasarse al formato de Igraph
+    \item
+    Eigen : Calcula valores propios y vectores propios de matrices numéricas (dobles, enteras, lógicas) o complejas.\\ \\ \\ \\ \\ \\
 	\end{itemize}	
-    %figura1.1
-% Ejemplo de poner imagen   
-%    \begin{figure}
-%   \centering
-%	\includegraphics[width=0.5\textwidth]{rotacion}
-%	\caption{Rotaci\'on}\label{FI1_1}
-%\end{figure}
-
 %Subseccion Experimentos y resultados
 \section{Experimentos y resultados}
 
 \begin{itemize}
 	\item
-	Línea base: Reproducción de resultados reportados en un artículo científico
-anterior.
+Línea base :\\ \\
+    \begin{tabular}{|l|l|}
+	\hline
+País & Ranking por FIFA \\
+\hline \hline
+Brasil & 1\\ \hline
+Uruguay & 2 \\ \hline
+Argentina & 3 \\ \hline
+Colombia & 4 \\ \hline
+Perú & 5 \\ \hline
+Chile & 6 \\ \hline
+Paraguay & 7 \\ \hline
+Ecuador & 8 \\ \hline
+Venezuela & 9 \\ \hline
+Bolivia & 10 \\ \hline
+\end{tabular}
 	\item
-	Evaluación del rendimiento de los modelos ensayados.
+Evaluación del rendimiento de los modelos ensayados: \\
+
+	\begin{tabular}{|l|l|}
+	\hline
+País & Ranking por PageRank\\
+\hline \hline
+Brasil & 0.4738853 \\ \hline
+Argentina & 0.3793522 \\ \hline
+Uruguay & 0.3731390\\ \hline
+Bolivia & 0.3616417 \\ \hline
+Colombia & 0.3153363 \\ \hline
+Perú & 0.2846076 \\ \hline
+Paraguay & 0.2669837 \\ \hline
+Chile & 0.2163052 \\ \hline
+Ecuador & 0.1977172 \\ \hline
+Venezuela & 0.1546235 \\ \hline
+\end{tabular}
     \item
-    Comparación de línea base y resultados propios.
+    Comparación de línea base y resultados propios : 
 	\end{itemize}	
 
-\subsection{Ejemplo de subsecuencia}
+%\subsection{Ejemplo de subsecuencia}
 
-Ejemplo de secuencias $X_{1}$,$X_{2}$, . . ., $X_{m}$
+%Ejemplo de secuencias $X_{1}$,$X_{2}$, . . ., $X_{m}$
 
-Ejemplo de sumatoria
-\[O(
-\sum_{k=1}^{n}p_{k}log(1/p_{k}))
-\]
- Ejemplo de O grande
-\begin{center}
- O(log($min_{i<j}$(|$x_{i}$| + $t_{i}$ + 2)))    
-\end{center}
+%Ejemplo de sumatoria
+%\[O(
+%\sum_{k=1}^{n}p_{k}log(1/p_{k}))
+%\]
+% Ejemplo de O grande
+%\begin{center}
+% O(log($min_{i<j}$(|$x_{i}$| + $t_{i}$ + 2)))    
+%\end{center}
 
 \section{Discusión}
 
@@ -130,11 +156,6 @@ Ejemplo de sumatoria
 %	\caption{Gr\'afica de elementos del \'arbol versus recorridos por el algoritmo al buscarlos}\label{FI1_3}
 %\end{figure}
 
-
-\paragraph{Ejemplo de subtítulo}
-Un conjunto de puntos que contenga a $ (x_i,i) $ es arb\'oricamente
-satisfecho si y s\'olo si este corresponde a un \'arbol de b\'usqueda
-binaria v\'alido para el input $ (x_1,...,x_m) $.
 
 \section{Conclusiones y trabajos futuros}
 Conclusiones del proyecto
